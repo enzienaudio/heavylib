@@ -1,0 +1,55 @@
+#N canvas 238 355 383 432 10;
+#X obj 44 259 *~;
+#X floatatom 59 212 5 0 0 0 - - -, f 5;
+#X obj 59 172 loadbang;
+#X obj 45 391 dac~;
+#X obj 164 153 hsl 128 15 -1 1 0 0 empty empty empty -2 8 0 10 -262144
+-1 -1 0 1;
+#N canvas 0 22 263 305 gain 0;
+#X obj 64 144 dbtorms;
+#X obj 64 124 + 100;
+#X obj 64 188 line~;
+#X msg 64 166 \$1 100;
+#X obj 64 210 outlet~;
+#X obj 64 103 inlet;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 5 0 1 0;
+#X restore 59 232 pd gain;
+#X obj 44 135 osc~ 1000;
+#X obj 180 214 hsl 128 15 0 20 0 0 empty empty empty -2 8 0 10 -262144
+-1 -1 0 1;
+#X obj 193 269 hsl 128 15 0 1 0 0 empty empty empty -2 8 0 10 -262144
+-1 -1 0 1;
+#X obj 139 89 hsl 128 15 0 1 0 0 empty empty empty -2 8 0 10 -262144
+-1 -1 0 1;
+#X msg 135 117 mix \$1;
+#X msg 159 181 feedback \$1;
+#X msg 177 236 speed \$1;
+#X msg 190 291 intensity \$1;
+#X obj 44 333 hv_flanger 20;
+#X msg 59 192 -40;
+#X text 245 183 // -1..1;
+#X text 239 236 // 0..20 Hz;
+#X text 275 293 // 0..1;
+#X text 182 116 // 0..1 (0=dry);
+#X text 39 29 Mono flanger effect unit;
+#X text 141 333 arg \$1: Delay time;
+#X connect 0 0 14 0;
+#X connect 1 0 5 0;
+#X connect 2 0 15 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 1;
+#X connect 6 0 0 0;
+#X connect 7 0 12 0;
+#X connect 8 0 13 0;
+#X connect 9 0 10 0;
+#X connect 10 0 14 1;
+#X connect 11 0 14 1;
+#X connect 12 0 14 1;
+#X connect 13 0 14 1;
+#X connect 14 0 3 0;
+#X connect 14 0 3 1;
+#X connect 15 0 1 0;

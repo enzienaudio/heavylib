@@ -1,0 +1,28 @@
+#N canvas 146 78 490 359 10;
+#X obj 33 206 hv_dispatch \$0 param-1 0.2;
+#X obj 33 228 hv_dispatch \$0 param-2 0.5;
+#X obj 33 175 t a;
+#X msg 33 108 param-1 \$1;
+#X msg 137 153 param-2 \$1;
+#X obj 140 130 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 35 84 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 49 290 r \$0-param-1;
+#X floatatom 49 312 5 0 0 0 - - -, f 5;
+#X floatatom 196 312 5 0 0 0 - - -, f 5;
+#X obj 196 290 r \$0-param-2;
+#X text 32 23 Automatically generates local send object for parameter
+distribution.;
+#X text 229 55 arg \$1: Unique ID;
+#X text 229 70 arg \$2: Parameter name;
+#X text 229 86 arg \$3: Default value;
+#X text 209 227 Can chain hv_dispatch objects together;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 10 0 9 0;
