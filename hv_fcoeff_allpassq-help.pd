@@ -1,0 +1,38 @@
+#N canvas 449 155 536 446 10;
+#X obj 64 296 biquad~;
+#X obj 64 337 *~ 0.5;
+#X obj 110 131 + 20;
+#X obj 113 58 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4100 1;
+#X obj 110 109 * 19980;
+#X obj 183 105 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4900 1;
+#X floatatom 118 157 5 0 0 0 - - -, f 5;
+#X obj 180 147 + 0.1;
+#X obj 180 125 * 9.9;
+#X floatatom 197 169 5 0 0 0 - - -, f 5;
+#X text 253 58 // frequency 20 ... 20000;
+#X text 322 104 // Q 0.1 ... 10;
+#X text 256 262 // arg \$1 Q;
+#X obj 110 263 hv_fcoeff_allpassq 2;
+#X text 22 17 biquad~ filter coefficient generator for allpass eq with
+Q;
+#X obj 34 379 dac~;
+#X obj 34 259 *~ 0.05;
+#X obj 34 237 noise~;
+#X connect 0 0 1 0;
+#X connect 1 0 15 0;
+#X connect 1 0 15 1;
+#X connect 2 0 6 0;
+#X connect 2 0 13 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 13 1;
+#X connect 8 0 7 0;
+#X connect 13 0 0 0;
+#X connect 16 0 0 0;
+#X connect 16 0 15 1;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
