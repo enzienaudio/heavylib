@@ -1,0 +1,24 @@
+#N canvas 807 78 551 416 10;
+#X msg 161 60 seed 1234;
+#X obj 63 223 print;
+#X obj 63 85 metro 1000;
+#X obj 63 189 hv_drunk 100 5;
+#X obj 67 58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 172 103 200;
+#X msg 159 155 3;
+#X text 189 152 max step size;
+#X text 73 271 A random walk (drunk) is a special case of a Markov
+chain \, in which the states are integers and the transitions add or
+subtract a small amount (or zero) from the previous state to get a
+new one. Here the "f" holds the state. When it gets a bang \, the previous
+state is added to a random number (from 0 to $bound) multiplied by
+a random sign (-1 or 1). The new value is then coerced into the range
+from 0 to $bound;
+#X text 202 105 bound;
+#X connect 0 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 1;
+#X connect 6 0 3 2;
