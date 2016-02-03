@@ -36,7 +36,7 @@
 #X restore 151 668 pd gainreduc;
 #X obj 151 648 r \$0-outputlevel;
 #X obj 136 758 *~;
-#X obj 151 728 line~;
+#X obj 151 732 line~;
 #X text 93 498 Gain reduction;
 #X obj 26 235 r \$0-graph-input;
 #X obj 61 193 r \$0-switch;
@@ -63,7 +63,7 @@
 #X obj 376 56 hv_dispatch \$0 threshold 70;
 #X obj 174 234 loadbang;
 #X obj 376 36 hv_dispatch \$0 ratio 1;
-#X msg 151 709 \$1 40;
+#X msg 151 710 \$1 40;
 #X connect 0 0 1 0;
 #X connect 0 1 2 1;
 #X connect 1 0 2 0;
