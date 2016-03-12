@@ -1,0 +1,18 @@
+#N canvas 608 484 390 231 10;
+#X obj 31 162 env~;
+#X floatatom 31 207 5 0 0 0 - - -, f 5;
+#X floatatom 30 71 5 0 0 0 - - -, f 5;
+#X obj 70 113 sig~ 0;
+#X obj 30 91 sig~ 0;
+#X obj 31 184 / 100;
+#X obj 31 137 hv_gte~;
+#X text 23 14 Signal rate >=~ (greater-then-or-equal-to) operation.
+;
+#X text 23 30 Outputs 1 if left input is greater than or equal to the
+right input \, 0 otherwise.;
+#X connect 0 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 6 1;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
