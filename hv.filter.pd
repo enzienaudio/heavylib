@@ -1,0 +1,10 @@
+#N canvas 1545 33 300 242 10;
+#X obj 82 150 hv.filters/\$1;
+#X obj 119 79 inlet freq;
+#X obj 157 106 inlet q;
+#X obj 82 53 inlet~;
+#X obj 82 182 outlet~;
+#X connect 0 0 4 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 2;
+#X connect 3 0 0 0;

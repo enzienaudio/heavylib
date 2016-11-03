@@ -1,0 +1,24 @@
+#N canvas 562 264 480 373 10;
+#X obj 57 73 noise~;
+#X obj 57 95 *~ 0.1;
+#X obj 115 141 mtof;
+#X obj 57 316 dac~;
+#X obj 115 190 line;
+#X obj 118 115 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6200 1;
+#X floatatom 168 199 5 0 0 0 - - -, f 5;
+#X msg 115 168 \$1 100;
+#X text 284 177 available filters:;
+#X text 304 197 peakq;
+#X obj 57 223 hv.filter.gain peakq;
+#X floatatom 216 189 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 1 0 10 0;
+#X connect 2 0 7 0;
+#X connect 4 0 10 1;
+#X connect 5 0 2 0;
+#X connect 6 0 10 2;
+#X connect 7 0 4 0;
+#X connect 10 0 3 0;
+#X connect 10 0 3 1;
+#X connect 11 0 10 3;
