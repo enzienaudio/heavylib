@@ -1,0 +1,27 @@
+#N canvas 931 325 384 406 10;
+#X obj 35 76 osc~ 440;
+#X obj 36 162 *~;
+#X obj 51 138 vline~;
+#X msg 51 112 0 \, 1 10 0 \, 0 100 10;
+#X obj 36 326 *~ 0.5;
+#X obj 37 354 dac~;
+#X obj 142 185 hsl 128 15 0 500 0 0 empty empty attack -2 -8 0 10 -262144
+-1 -1 14 1;
+#X obj 95 237 noise~;
+#X obj 95 264 *~ 0.1;
+#X obj 70 289 *~;
+#X obj 70 212 hv.envfollow;
+#X text 178 113 <-- trigger;
+#X text 32 33 Envelope follower with adjustable attack parameter;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 0 10 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 10 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 9 0 4 0;
+#X connect 10 0 9 0;
