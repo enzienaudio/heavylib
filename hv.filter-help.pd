@@ -9,8 +9,9 @@
 -1 -1 0 1;
 #X floatatom 162 199 5 0 0 0 - - -, f 5;
 #X msg 109 168 \$1 100;
-#X text 284 177 available filters:;
-#X text 304 197 lowpassq;
+#X text 228 243 lowpassq;
+#X text 228 263 highpassq;
+#X text 178 223 <--- available filters:;
 #X connect 0 0 4 0;
 #X connect 0 0 4 1;
 #X connect 1 0 2 0;
