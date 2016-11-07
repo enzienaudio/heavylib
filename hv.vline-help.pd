@@ -17,7 +17,7 @@ to [vline~];
 #X obj 53 370 dbtorms;
 #X floatatom 53 392 5 0 0 0 - - -, f 5;
 #X msg 126 226 1 1000 \, 0 0 1000 \, 1 1000 1000;
-#X obj 53 299 hv.vline~;
+#X obj 53 299 hv.vline;
 #X connect 1 0 15 0;
 #X connect 2 0 15 0;
 #X connect 3 0 15 0;
