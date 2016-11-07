@@ -23,9 +23,9 @@ Processing
 
 `[hv.envfollow]` - Cheap envelope follower.
 
-`[hv.filter]` - Variable type filter with Frequency, Q parameters.
+`[hv.filter]` - Variable type filter with Frequency, Q parameters. Options are currently `lowpassq`, `highpassq` and `allpassq`.
 
-`[hv.filter.gain]` - Variable type filter with Frequency, Q and Gain parameters.
+`[hv.filter.gain]` - Variable type filter with Frequency, Q and Gain parameters. Options are currently `peakq`.
 
 Math Operations
 ---
