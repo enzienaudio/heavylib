@@ -31,13 +31,13 @@ Math Operations
 ---
 `[hv.tanh]` - Static non-linear waveshaper.
 
-`[hv.gt]` - Signal-rate greater than ( > )
+`[hv.gt]` - Signal-rate greater than ( > ).
 
-`[hv.gte]` - Signal-rate greater than or equal to ( >= )
+`[hv.gte]` - Signal-rate greater than or equal to ( >= ).
 
-`[hv.lt]` - Signal-rate less than ( < )
+`[hv.lt]` - Signal-rate less than ( < ).
 
-`[hv.lte]` - Signal-rate less than or equal to ( <= )
+`[hv.lte]` - Signal-rate less than or equal to ( <= ).
 
 Logic
 ---
