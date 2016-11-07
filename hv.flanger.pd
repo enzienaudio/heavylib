@@ -110,10 +110,10 @@
 #X obj 55 175 vd~ \$0-flanger;
 #X obj 40 354 delwrite~ \$0-flanger \$1;
 #X obj 101 228 clip -1 1;
-#X obj 208 51 hv_dispatch \$0 intensity 0.2;
-#X obj 208 73 hv_dispatch \$0 feedback 0;
-#X obj 208 95 hv_dispatch \$0 speed 2;
-#X obj 208 117 hv_dispatch \$0 mix 0.5;
+#X obj 208 51 hv.dispatch \$0 intensity 0.2;
+#X obj 208 73 hv.dispatch \$0 feedback 0;
+#X obj 208 95 hv.dispatch \$0 speed 2;
+#X obj 208 117 hv.dispatch \$0 mix 0.5;
 #X connect 1 0 9 0;
 #X connect 1 0 16 0;
 #X connect 2 0 7 1;
