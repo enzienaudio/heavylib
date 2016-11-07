@@ -1,10 +1,10 @@
-#N canvas 1545 33 300 242 10;
-#X obj 82 170 hv.filters/\$1;
-#X obj 107 82 inlet freq;
-#X obj 132 107 inlet q;
-#X obj 82 53 inlet~;
-#X obj 82 202 outlet~;
-#X obj 157 141 inlet gain;
+#N canvas 1545 33 271 233 10;
+#X obj 59 151 hv.filters/\$1;
+#X obj 84 63 inlet freq;
+#X obj 109 88 inlet q;
+#X obj 59 34 inlet~;
+#X obj 59 183 outlet~;
+#X obj 134 122 inlet gain;
 #X connect 0 0 4 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 2;
