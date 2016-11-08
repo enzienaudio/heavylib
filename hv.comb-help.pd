@@ -1,0 +1,68 @@
+#N canvas 405 187 541 648 10;
+#X obj 119 90 metro 1000;
+#X obj 119 112 t b b;
+#X obj 33 244 *~;
+#X msg 146 137 1 10;
+#X obj 33 100 noise~;
+#X msg 119 185 0 50;
+#X obj 119 163 del 10;
+#X obj 33 597 dac~;
+#X msg 100 293 feedfwd \$1;
+#X msg 100 411 indelay \$1;
+#X obj 103 268 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 177 293 5 0 0 0 - - -, f 5;
+#X obj 103 388 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10000 1;
+#X obj 33 561 hv.comb;
+#X obj 119 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 33 122 *~ 0.1;
+#X obj 119 207 line~;
+#X text 39 36 Comb filter;
+#X text 244 267 Feedforward amount (0...0.999);
+#X obj 103 328 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 11800 1;
+#X floatatom 207 353 5 0 0 0 - - -, f 5;
+#X text 244 327 Feedback amount (0...0.999);
+#X msg 100 353 feedback \$1;
+#X floatatom 177 413 5 0 0 0 - - -, f 5;
+#X obj 103 448 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8400 1;
+#X floatatom 177 473 5 0 0 0 - - -, f 5;
+#X text 238 449 Input delay time (0...50ms);
+#X obj 102 498 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5400 1;
+#X floatatom 176 523 5 0 0 0 - - -, f 5;
+#X msg 99 521 slide \$1;
+#X text 238 499 Delay update interpolation time (0...1000ms);
+#X text 238 389 Output delay time (0...50ms);
+#X msg 100 471 outdelay \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 3 0;
+#X connect 2 0 13 0;
+#X connect 3 0 16 0;
+#X connect 4 0 15 0;
+#X connect 5 0 16 0;
+#X connect 6 0 5 0;
+#X connect 8 0 13 1;
+#X connect 9 0 13 1;
+#X connect 10 0 8 0;
+#X connect 10 0 11 0;
+#X connect 12 0 9 0;
+#X connect 12 0 23 0;
+#X connect 13 0 7 0;
+#X connect 13 0 7 1;
+#X connect 14 0 0 0;
+#X connect 15 0 2 0;
+#X connect 16 0 2 1;
+#X connect 19 0 22 0;
+#X connect 19 0 20 0;
+#X connect 22 0 13 1;
+#X connect 24 0 32 0;
+#X connect 24 0 25 0;
+#X connect 27 0 29 0;
+#X connect 27 0 28 0;
+#X connect 29 0 13 1;
+#X connect 32 0 13 1;

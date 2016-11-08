@@ -17,6 +17,8 @@ Processing
 
 `[hv.compressor2]` - Stereo version of `[hv.compressor]`.
 
+`[hv.comb]` - Comb filter effect unit.
+
 `[hv.flanger]` - Flange effect unit.
 
 `[hv.flanger2]` - Stereo version of `[hv.flanger]`.
