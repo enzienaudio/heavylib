@@ -23,6 +23,8 @@ Processing
 
 `[hv.flanger2]` - Stereo version of `[hv.flanger]`.
 
+`[hv.freqshift]` - Frequency shifter effect unity.
+
 `[hv.envfollow]` - Cheap envelope follower.
 
 `[hv.filter]` - Variable type filter with Frequency, Q parameters. Options are currently `lowpassq`, `highpassq` and `allpassq`.
