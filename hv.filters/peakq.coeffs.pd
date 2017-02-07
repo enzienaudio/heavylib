@@ -1,4 +1,4 @@
-#N canvas 1073 164 688 760 10;
+#N canvas 269 157 688 760 10;
 #N canvas 0 22 783 567 hz2rad 0;
 #X obj 194 113 samplerate~;
 #X obj 194 71 loadbang;
