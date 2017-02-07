@@ -27,7 +27,17 @@ Processing
 
 `[hv.envfollow]` - Cheap envelope follower.
 
-`[hv.filter]` - Variable type filter with Frequency, Q parameters. Options are currently `lowpassq`, `highpassq` and `allpassq`.
+`[hv.filter allpassq]` - Allpass filter with Q control (Biquad)
+
+`[hv.filter lowpassq]` - Lowpass filter with Q control (Biquad)
+
+`[hv.filter highpassq]` - Highpass filter with Q control (Biquad)
+
+`[hv.filter bandpassq1]` - Bandpass filter with Q control, peak gain = Q (Biquad)
+
+`[hv.filter bandpassq2]` - Bandpass filter with Q control, constant 0dB peak gain (Biquad)
+
+`[hv.filter notchq]` - Notch filter with Q control (Biquad)
 
 `[hv.filter.gain]` - Variable type filter with Frequency, Q and Gain parameters. Options are currently `peakq`.
 
