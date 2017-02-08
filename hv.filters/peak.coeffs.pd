@@ -1,4 +1,4 @@
-#N canvas 269 157 688 760 10;
+#N canvas 269 22 680 743 10;
 #N canvas 0 22 783 567 hz2rad 0;
 #X obj 194 113 samplerate~;
 #X obj 194 71 loadbang;
@@ -132,8 +132,6 @@
 #X text 372 626 a1 = -2*cos(w0);
 #X text 372 646 a2 = 1 - alpha/A;
 #X text 358 585 Peaking EQ:;
-#X text 24 25 Peaking EQ with Q - biquad filter coefficient generator
-;
 #X obj 316 281 clip -24 24;
 #X obj 316 441 s \$0-A;
 #X obj 316 311 / 40;
@@ -162,6 +160,8 @@
 #X obj 218 244 f \$2;
 #X obj 316 245 f \$3;
 #X obj 117 79 t b b;
+#X text 24 25 Peaking EQ with Q and gain - biquad filter coefficient
+generator;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -182,11 +182,11 @@
 #X connect 20 0 35 0;
 #X connect 21 0 36 0;
 #X connect 22 0 37 0;
-#X connect 23 0 63 0;
-#X connect 23 1 64 1;
-#X connect 24 0 63 0;
+#X connect 23 0 62 0;
+#X connect 23 1 63 1;
+#X connect 24 0 62 0;
 #X connect 25 0 23 0;
-#X connect 26 0 66 0;
+#X connect 26 0 65 0;
 #X connect 31 0 18 0;
 #X connect 31 1 19 0;
 #X connect 31 2 20 0;
@@ -194,24 +194,24 @@
 #X connect 31 4 22 0;
 #X connect 32 0 15 0;
 #X connect 32 1 6 0;
-#X connect 32 2 64 0;
+#X connect 32 2 63 0;
 #X connect 38 0 18 1;
 #X connect 39 0 19 1;
 #X connect 40 0 20 1;
 #X connect 41 0 21 1;
 #X connect 42 0 22 1;
-#X connect 51 0 53 0;
+#X connect 50 0 52 0;
+#X connect 52 0 53 0;
 #X connect 53 0 54 0;
+#X connect 53 1 55 1;
 #X connect 54 0 55 0;
-#X connect 54 1 56 1;
-#X connect 55 0 56 0;
-#X connect 56 0 52 0;
-#X connect 57 0 58 0;
-#X connect 58 0 63 0;
-#X connect 58 1 65 0;
-#X connect 62 0 15 1;
-#X connect 63 0 32 0;
-#X connect 64 0 7 0;
-#X connect 65 0 51 0;
-#X connect 66 0 63 0;
-#X connect 66 1 65 0;
+#X connect 55 0 51 0;
+#X connect 56 0 57 0;
+#X connect 57 0 62 0;
+#X connect 57 1 64 0;
+#X connect 61 0 15 1;
+#X connect 62 0 32 0;
+#X connect 63 0 7 0;
+#X connect 64 0 50 0;
+#X connect 65 0 62 0;
+#X connect 65 1 64 0;

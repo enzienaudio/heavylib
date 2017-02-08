@@ -13,9 +13,16 @@ Synthesis
 
 Processing
 ---
+
+### Dynamics
+
 `[hv.compressor]` - Compressor unit with Threshold and Ratio parameters. (Attack/Release is fixed at 40ms)
 
 `[hv.compressor2]` - Stereo version of `[hv.compressor]`.
+
+`[hv.envfollow]` - Cheap envelope follower.
+
+### Effects
 
 `[hv.comb]` - Comb filter effect unit.
 
@@ -25,7 +32,7 @@ Processing
 
 `[hv.freqshift]` - Frequency shifter effect unity.
 
-`[hv.envfollow]` - Cheap envelope follower.
+### Filtering
 
 `[hv.filter allpass]` - Allpass filter with Q control (Biquad).
 
@@ -40,6 +47,10 @@ Processing
 `[hv.filter notch]` - Notch filter with Q control (Biquad)
 
 `[hv.filter.gain peak]` - Peaking filter with Frequency, Q and Gain parameters (Biquad).
+
+`[hv.filter.gain lowshelf]` - Low shelving filter with Frequency, Q and Gain parameters (Biquad).
+
+`[hv.filter.gain highshelf]` - High shelving filter with Frequency, Q and Gain parameters (Biquad).
 
 Math Operations
 ---
