@@ -363,7 +363,7 @@
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
 #X restore 223 110 pd s;
-#X obj 94 83 highpassq.coeffs \$1 \$2;
+#X obj 94 83 highpass.coeffs \$1 \$2;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 10 0;

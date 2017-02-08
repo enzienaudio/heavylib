@@ -1,25 +1,25 @@
-#N canvas 1104 365 846 567 10;
+#N canvas 204 98 846 567 10;
 #X obj 42 171 noise~;
-#X obj 95 261 mtof;
-#X obj 98 237 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9400 1;
-#X floatatom 158 390 5 0 0 0 - - -, f 5;
-#X obj 151 321 hsl 128 15 0.1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X text 240 236 // frequency;
-#X obj 212 391 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 148 341 * 10;
-#X obj 148 363 + 0.1;
-#X floatatom 209 455 5 0 0 0 - - -, f 5;
-#X floatatom 105 285 5 0 0 0 - - -, f 5;
-#X text 289 323 // q;
-#X text 348 390 // gain (dB);
+#X obj 93 261 mtof;
+#X obj 96 237 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8000 1;
+#X floatatom 154 390 5 0 0 0 - - -, f 5;
+#X obj 147 321 hsl 128 15 0.1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 744 1;
+#X text 238 236 // frequency;
+#X obj 198 391 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 144 341 * 10;
+#X obj 144 363 + 0.1;
+#X floatatom 205 455 5 0 0 0 - - -, f 5;
+#X floatatom 103 285 5 0 0 0 - - -, f 5;
+#X text 285 323 // q;
+#X text 334 390 // gain (dB);
 #X obj 42 193 *~ 0.05;
-#X obj 189 161 loadbang;
-#X msg 189 182 69;
-#X msg 227 366 6;
-#X msg 177 298 0.5;
+#X obj 187 161 loadbang;
+#X msg 187 182 69;
+#X msg 213 366 6;
+#X msg 173 298 0.5;
 #X obj 430 121 hv.filters/spectrolog;
 #X text 50 96 Available filters:;
 #X text 31 57 Includes signal-rate coefficient updating to avoid clicks
@@ -28,20 +28,20 @@ when sweeping the controls.;
 #X text 31 19 Generic filter module with swappable filter types and
 frequency \, Q and gain settings.;
 #X obj 430 96 r~ \$0-peakq;
-#X obj 42 481 hv.filter.gain peakq 1000 2;
 #X obj 42 503 s~ \$0-peakq;
-#X obj 209 411 * 48;
-#X obj 209 433 - 24;
+#X obj 195 411 * 48;
+#X obj 195 433 - 24;
+#X obj 42 481 hv.filter.gain peak 1000 2;
 #X connect 0 0 13 0;
 #X connect 1 0 10 0;
-#X connect 1 0 24 1;
+#X connect 1 0 27 1;
 #X connect 2 0 1 0;
 #X connect 4 0 7 0;
-#X connect 6 0 26 0;
+#X connect 6 0 25 0;
 #X connect 7 0 8 0;
 #X connect 8 0 3 0;
-#X connect 8 0 24 2;
-#X connect 13 0 24 0;
+#X connect 8 0 27 2;
+#X connect 13 0 27 0;
 #X connect 14 0 15 0;
 #X connect 14 0 17 0;
 #X connect 14 0 16 0;
@@ -49,7 +49,7 @@ frequency \, Q and gain settings.;
 #X connect 16 0 6 0;
 #X connect 17 0 4 0;
 #X connect 23 0 18 0;
-#X connect 24 0 25 0;
-#X connect 26 0 27 0;
-#X connect 27 0 9 0;
-#X connect 27 0 24 3;
+#X connect 25 0 26 0;
+#X connect 26 0 9 0;
+#X connect 26 0 27 3;
+#X connect 27 0 24 0;
