@@ -1,5 +1,5 @@
-#N canvas 682 243 348 289 10;
-#X obj 35 206 outlet~;
+#N canvas 682 243 312 271 10;
+#X obj 35 216 outlet~;
 #X obj 35 44 inlet~;
 #N canvas 140 389 549 400 @hv_obj 0;
 #X obj 133 65 inlet~ b0;
@@ -315,7 +315,7 @@
 #X connect 8 0 9 0;
 #X connect 10 0 8 2;
 #X connect 11 0 8 3;
-#X restore 35 153 pd @hv_obj biquad;
+#X restore 35 183 pd @hv_obj biquad;
 #X obj 94 43 inlet freq;
 #X obj 223 44 inlet q;
 #N canvas 0 22 173 173 s 0;
@@ -335,7 +335,7 @@
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
-#X restore 158 110 pd s;
+#X restore 170 110 pd s;
 #N canvas 0 22 173 173 s 0;
 #X obj 37 46 inlet;
 #X obj 37 90 line~;
@@ -344,7 +344,7 @@
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
-#X restore 192 110 pd s;
+#X restore 202 110 pd s;
 #N canvas 0 22 173 173 s 0;
 #X obj 37 46 inlet;
 #X obj 37 90 line~;
@@ -353,8 +353,9 @@
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
-#X restore 226 110 pd s;
+#X restore 234 110 pd s;
 #X obj 94 83 bandpass1.coeffs \$1 \$2;
+#X obj 126 110 sig~ 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 3 0 9 0;
@@ -367,3 +368,4 @@
 #X connect 9 2 6 0;
 #X connect 9 3 7 0;
 #X connect 9 4 8 0;
+#X connect 10 0 2 2;
