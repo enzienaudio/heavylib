@@ -13,9 +13,16 @@ Synthesis
 
 Processing
 ---
+
+### Dynamics
+
 `[hv.compressor]` - Compressor unit with Threshold and Ratio parameters. (Attack/Release is fixed at 40ms)
 
 `[hv.compressor2]` - Stereo version of `[hv.compressor]`.
+
+`[hv.envfollow]` - Cheap envelope follower.
+
+### Effects
 
 `[hv.comb]` - Comb filter effect unit.
 
@@ -23,11 +30,27 @@ Processing
 
 `[hv.flanger2]` - Stereo version of `[hv.flanger]`.
 
-`[hv.envfollow]` - Cheap envelope follower.
+`[hv.freqshift]` - Frequency shifter effect unity.
 
-`[hv.filter]` - Variable type filter with Frequency, Q parameters. Options are currently `lowpassq`, `highpassq` and `allpassq`.
+### Filtering
 
-`[hv.filter.gain]` - Variable type filter with Frequency, Q and Gain parameters. Options are currently `peakq`.
+`[hv.filter allpass]` - Allpass filter with Q control (Biquad).
+
+`[hv.filter lowpass]` - Lowpass filter with Q control (Biquad).
+
+`[hv.filter highpass]` - Highpass filter with Q control (Biquad).
+
+`[hv.filter bandpass1]` - Bandpass filter with Q control, peak gain = Q (Biquad).
+
+`[hv.filter bandpass2]` - Bandpass filter with Q control, constant 0dB peak gain (Biquad).
+
+`[hv.filter notch]` - Notch filter with Q control (Biquad)
+
+`[hv.filter.gain peak]` - Peaking filter with Frequency, Q and Gain parameters (Biquad).
+
+`[hv.filter.gain lowshelf]` - Low shelving filter with Frequency, Q and Gain parameters (Biquad).
+
+`[hv.filter.gain highshelf]` - High shelving filter with Frequency, Q and Gain parameters (Biquad).
 
 Math Operations
 ---

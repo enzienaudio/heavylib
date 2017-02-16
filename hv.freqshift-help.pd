@@ -1,0 +1,16 @@
+#N canvas 458 122 329 268 10;
+#X obj 46 144 hv.freqshift;
+#X obj 46 201 dac~;
+#X obj 46 77 osc~ 440;
+#X obj 46 99 *~ 0.1;
+#X obj 115 120 sig~;
+#X obj 115 75 r freq @hv_param -100 100 0;
+#X text 32 23 Frequency shifter effect unit;
+#X floatatom 115 97 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 7 0;
+#X connect 7 0 4 0;
