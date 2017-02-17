@@ -30,7 +30,9 @@ Processing
 
 `[hv.flanger2]` - Stereo version of `[hv.flanger]`.
 
-`[hv.freqshift]` - Frequency shifter effect unity.
+`[hv.freqshift]` - Frequency shifter effect unit.
+
+`[hv.reverb]` - Simple reverb unit.
 
 ### Filtering
 
