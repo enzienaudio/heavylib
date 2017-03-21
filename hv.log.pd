@@ -15,8 +15,8 @@
 #X msg 77 208 0.693147 \$1;
 #X obj 14 46 max~ 0;
 #X text 61 46 [0 \, inf];
-#X obj 37 117 f \$1;
-#X obj 37 94 loadbang;
+#X obj 38 117 f \$1;
+#X obj 38 94 loadbang;
 #X obj 38 160 moses 1;
 #X obj 49 137 inlet;
 #X obj 14 254 *~ 0.693147;
