@@ -56,15 +56,17 @@ Processing
 
 Math Operations
 ---
-`[hv.tanh]` - Static non-linear waveshaper.
-
 `[hv.gt]` - Signal-rate greater than ( > ).
 
 `[hv.gte]` - Signal-rate greater than or equal to ( >= ).
 
+`[hv.log]` - Signal-rate natural logarithm ( ln ).
+
 `[hv.lt]` - Signal-rate less than ( < ).
 
 `[hv.lte]` - Signal-rate less than or equal to ( <= ).
+
+`[hv.tanh]` - Static non-linear waveshaper.
 
 Logic
 ---
