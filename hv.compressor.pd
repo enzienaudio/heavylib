@@ -1,14 +1,14 @@
 #N canvas 595 23 526 691 10;
 #X obj 315 56 inlet;
 #X obj 28 52 inlet~ input;
-#X obj 28 643 outlet~;
+#X obj 28 633 outlet~;
 #X obj 43 179 r \$0-threshold;
 #X obj 256 617 hv.dispatch \$0 knee 10;
 #X obj 315 106 hv.dispatch \$0 threshold -20;
 #X obj 315 86 hv.dispatch \$0 ratio 5;
 #X obj 43 201 clip -100 0;
 #X obj 43 247 line~;
-#X obj 75 446 line~;
+#X obj 58 466 line~;
 #X obj 315 126 hv.dispatch \$0 rms 1;
 #X obj 205 124 r \$0-rms;
 #N canvas 0 22 296 300 rms/peak 1;
@@ -43,7 +43,7 @@
 #X restore 142 160 pd rms/peak;
 #X text 192 467 slope = 1 - (1 / ratio);
 #X obj 43 390 -~;
-#X obj 43 467 *~;
+#X obj 43 487 *~;
 #N canvas 0 22 510 686 envfollow 0;
 #X obj 38 464 -~;
 #X obj 38 424 sig~ 1;
@@ -124,10 +124,10 @@
 #X connect 40 0 7 0;
 #X connect 40 0 14 0;
 #X restore 142 265 pd envfollow;
-#X obj 43 505 min~ 0;
+#X obj 43 522 min~ 0;
 #X obj 28 598 *~;
-#X obj 43 560 dbtorms~;
-#X obj 43 527 +~ 100;
+#X obj 43 567 dbtorms~;
+#X obj 43 544 +~ 100;
 #X obj 315 246 r \$0-ratio;
 #X msg 315 289 1 \$1;
 #X obj 315 311 /;
@@ -135,7 +135,7 @@
 #X msg 315 333 1 \$1;
 #X obj 315 355 -;
 #X obj 315 377 s \$0-slope;
-#X obj 75 397 r \$0-slope;
+#X obj 58 424 r \$0-slope;
 #X obj 176 198 r \$0-attack;
 #X obj 211 229 r \$0-release;
 #X obj 315 146 hv.dispatch \$0 attack 0;
@@ -143,7 +143,7 @@
 #X text 192 487 gain_dB = slope * (threshold_dB - env_dB);
 #X text 192 507 out = in * toAmp(min(gain_dB \, 0));
 #X obj 43 223 pack f 10;
-#X obj 75 424 pack f 10;
+#X obj 58 444 pack f 10;
 #X text 246 589 TODO:;
 #X connect 0 0 6 0;
 #X connect 1 0 12 0;
