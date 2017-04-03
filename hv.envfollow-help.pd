@@ -5,7 +5,7 @@
 #X obj 36 346 *~ 0.5;
 #X obj 37 374 dac~;
 #X obj 107 164 hsl 128 15 0 500 0 0 empty empty attack -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 700 1;
 #X obj 95 257 noise~;
 #X obj 95 284 *~ 0.1;
 #X obj 70 309 *~;
@@ -14,7 +14,7 @@
 #X text 32 33 Envelope follower with adjustable attack parameter;
 #X floatatom 114 186 5 0 0 0 - - -, f 5;
 #X obj 169 200 hsl 128 15 0 1000 0 0 empty empty release -2 -8 0 10
--262144 -1 -1 9100 1;
+-262144 -1 -1 7400 1;
 #X floatatom 166 220 5 0 0 0 - - -, f 5;
 #X msg 51 112 0 \, 1 1 0 \, 0 100 10;
 #X connect 0 0 1 0;

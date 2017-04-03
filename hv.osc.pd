@@ -1,0 +1,8 @@
+#N canvas 359 420 324 252 10;
+#X obj 97 174 outlet~;
+#X obj 148 108 inlet phase;
+#X obj 97 78 inlet~ freq;
+#X obj 97 132 hv.osc/\$1;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

@@ -5,11 +5,23 @@ See the -help.pd patches for more information on each object.
 
 Synthesis
 ---
-`[hv.blepsaw]` - Band-limited PolyBlep sawtooth signal generator. [_more info_](https://github.com/cfloisand/pd-polyblep/blob/master/Source/polyblep~.c)
+
+### Band-limited oscillators
+
+`[hv.osc saw]` - Band-limited PolyBlep sawtooth signal generator. [_more info_](https://github.com/cfloisand/pd-polyblep/blob/master/Source/polyblep~.c)
+
+`[hv.osc sine]` - Same as Pd `[osc~]` added for convenience.
+
+`[hv.osc square]` - Band-limited PolyBlep square signal generator.
+
+### Noise
 
 `[hv.pinknoise]` - Cheapish pinknoise generator. [_more info_](http://www.firstpr.com.au/dsp/pink-noise/)
 
+### Envelopes
+
 `[hv.vline]` - Envelope generator, replacement for Pd's [vline~] object.
+
 
 Processing
 ---
