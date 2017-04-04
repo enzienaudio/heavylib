@@ -1,4 +1,4 @@
-#N canvas 524 23 1093 628 10;
+#N canvas 152 23 1189 640 10;
 #X floatatom 31 316 5 0 0 0 - - -, f 5;
 #X obj 31 345 sig~;
 #X text 65 316 Hz;
@@ -9,7 +9,7 @@ wavetables.;
 #X obj 302 395 phasor~;
 #X obj 302 417 *~ 2;
 #X obj 302 439 -~ 1;
-#X obj 52 428 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 52 428 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 323 471 == 0;
 #X text 70 427 compare to (centred) phasor output;
@@ -39,11 +39,11 @@ wavetables.;
 #X text 407 276 Square;
 #X text 452 426 compare to a dirty square;
 #X obj 491 336 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 1200 1;
 #X text 629 335 Pulse-width control (0..1);
 #X floatatom 122 316 5 0 0 0 - - -, f 5;
 #X text 162 314 phase reset;
-#X obj 445 539 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 445 539 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 60 548 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -57,55 +57,25 @@ wavetables.;
 #X obj 717 91 loadbang;
 #X obj 717 113 metro 80;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$0-array1 1000 float 3;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 1 1000 -1 200 140 1;
-#X restore 843 69 graph;
+#X array \$0-array1 1000 float 0;
+#X coords 0 1 999 -1 300 200 1 0 0;
+#X restore 857 52 graph;
 #X obj 718 144 tabwrite~ \$0-array1;
-#X obj 778 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 778 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 31 547 *~;
 #X obj 413 537 *~;
 #X obj 31 579 throw~ \$0-mix;
-#X obj 413 576 throw~ \$0-mix;
+#X obj 409 577 throw~ \$0-mix;
 #X obj 689 58 catch~ \$0-mix;
-#X obj 31 400 hv.osc saw;
-#X obj 413 390 hv.osc square;
 #X obj 499 60 hv.osc sine;
 #X obj 499 90 hv.osc saw;
 #X obj 499 120 hv.osc square;
+#X obj 413 390 hv.osc square;
+#X obj 31 400 hv.osc saw;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
-#X connect 1 0 53 0;
+#X connect 1 0 57 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 7 0 12 0;
@@ -115,15 +85,17 @@ wavetables.;
 #X connect 12 0 48 0;
 #X connect 13 0 48 0;
 #X connect 20 0 21 0;
+#X connect 20 0 1 0;
 #X connect 21 0 38 0;
-#X connect 21 0 54 0;
+#X connect 21 0 56 0;
 #X connect 23 0 24 0;
 #X connect 23 0 26 1;
 #X connect 24 0 25 1;
 #X connect 25 0 49 0;
 #X connect 26 0 49 0;
-#X connect 30 0 54 1;
-#X connect 32 0 53 1;
+#X connect 30 0 56 1;
+#X connect 32 0 5 1;
+#X connect 32 0 57 1;
 #X connect 34 0 49 1;
 #X connect 35 0 48 1;
 #X connect 36 0 30 0;
@@ -139,5 +111,5 @@ wavetables.;
 #X connect 49 0 51 0;
 #X connect 52 0 41 0;
 #X connect 52 0 46 0;
-#X connect 53 0 13 0;
-#X connect 54 0 26 0;
+#X connect 56 0 26 0;
+#X connect 57 0 13 0;
