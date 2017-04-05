@@ -1,0 +1,37 @@
+#N canvas 1286 391 556 436 10;
+#X obj 75 181 sig~ 5;
+#X obj 98 217 sig~ 250;
+#X obj 213 224 sig~ 1;
+#X obj 356 197 hsl 128 15 0 2 0 0 empty empty rhs -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 352 242 sig~;
+#X floatatom 353 221 5 0 0 0 - - -, f 5;
+#X obj 75 332 env~;
+#X obj 75 354 dbtorms;
+#X floatatom 75 376 5 0 0 0 - - -, f 5;
+#X text 47 119 else:;
+#X obj 216 201 hsl 128 15 0 2 0 0 empty empty lhs -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 394 148 loadbang;
+#X msg 394 170 2;
+#X text 57 99 output = a;
+#X text 57 139 output = b;
+#X text 26 22 Signal multiplexer.;
+#X text 25 42 Output one of two input signals based on a comparison
+result.;
+#X text 126 180 a;
+#X text 163 217 b;
+#X obj 75 310 hv.multiplex;
+#X text 47 79 if lhs > rhs:;
+#X connect 0 0 19 0;
+#X connect 1 0 19 1;
+#X connect 2 0 19 2;
+#X connect 3 0 5 0;
+#X connect 4 0 19 3;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 10 0 2 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 0;
+#X connect 19 0 6 0;
