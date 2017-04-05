@@ -1,11 +1,10 @@
 # heavylib
-Library of [Heavy](https://enzienaudio.com) compatible abstractions.
+Library of [heavy](https://enzienaudio.com) compatible abstractions.
 
 See the -help.pd patches for more information on each object.
 
 Synthesis
 ---
-
 ### Band-limited oscillators
 
 `[hv.osc saw]` - Band-limited PolyBlep sawtooth signal generator. [_more info_](https://github.com/cfloisand/pd-polyblep/blob/master/Source/polyblep~.c)
@@ -25,7 +24,6 @@ Synthesis
 
 Processing
 ---
-
 ### Dynamics
 
 `[hv.compressor]` - Compressor unit with Threshold and Ratio parameters. (Attack/Release is fixed at 40ms)
@@ -79,6 +77,8 @@ Math Operations
 `[hv.lte]` - Signal-rate less than or equal to ( <= ).
 
 `[hv.tanh]` - Static non-linear waveshaper.
+
+`[hv.multiplex]` - Mix between two input signals based on a comparator.
 
 Logic
 ---
