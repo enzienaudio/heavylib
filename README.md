@@ -66,6 +66,8 @@ Processing
 
 Math Operations
 ---
+`[hv.exp]` - Signal-rate exponential ( exp ), alternative implementation.
+
 `[hv.gt]` - Signal-rate greater than ( > ).
 
 `[hv.gte]` - Signal-rate greater than or equal to ( >= ).
@@ -76,9 +78,11 @@ Math Operations
 
 `[hv.lte]` - Signal-rate less than or equal to ( <= ).
 
-`[hv.tanh]` - Static non-linear waveshaper.
-
 `[hv.multiplex]` - Mix between two input signals based on a comparator.
+
+`[hv.pow]` - Signal-rate exponent ( x ^ y ), alternative implementation.
+
+`[hv.tanh]` - Static non-linear waveshaper.
 
 Logic
 ---

@@ -1,0 +1,7 @@
+#N canvas 485 59 405 128 10;
+#X obj 25 88 pow~;
+#X text 22 10 This abstraction presents an alternative implementation
+to the pow~ object. Heavy uses the system's powf() function (as does
+Pd) \, but some applications may wish to avoid the powf() function
+entirely. Both inlets are signal-rate. This abstraction may also make
+use of the hv.exp object instead of the exp~ object.;
