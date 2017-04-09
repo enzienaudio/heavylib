@@ -80,6 +80,8 @@ Math Operations
 
 `[hv.multiplex]` - Mix between two input signals based on a comparator.
 
+`[hv.pow]` - Signal-rate power operator ( x^y ).
+
 Logic
 ---
 
