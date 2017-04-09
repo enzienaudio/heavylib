@@ -1,0 +1,22 @@
+#N canvas 483 117 402 292 10;
+#X obj 20 123 sig~;
+#X obj 51 187 loadbang;
+#X obj 51 211 metro 100;
+#X obj 51 235 snapshot~;
+#X floatatom 20 87 5 0 0 0 - - -, f 5;
+#X obj 61 123 sig~;
+#X floatatom 61 87 5 0 0 0 - - -, f 5;
+#X floatatom 51 260 7 0 0 0 - - -, f 7;
+#X obj 21 152 hv.pow;
+#X text 17 12 This object replicates the behaviour of Pd's pow~. The
+left inlet is raised by the power of the right inlet. Both inlets are
+signal-rate. The left inlet must be a positive number. The right inlet
+my be positive \, zero \, or negative.;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 4 0 0 0;
+#X connect 5 0 8 1;
+#X connect 6 0 5 0;
+#X connect 8 0 3 0;
