@@ -1,0 +1,6 @@
+#N canvas 485 59 405 128 10;
+#X obj 25 84 exp~;
+#X text 22 10 This abstraction presents an alternative implementation
+to the exp~ object. Heavy uses the system's expf() function (as does
+Pd) \, but some applications may wish to avoid the expf() function
+entirely \, and instead use this reasonably fast approximation.;
