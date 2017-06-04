@@ -40,7 +40,7 @@ It determines the length of the convolution.;
 #X text 147 117 NOTE! Pd-Vanilla does not have a default convolution
 object. This functionality is generally provided by any number of externals
 \, such as conv~ or fir~. In order to effectively use hv.conv in Pd
-\, edit the __conf~f subgraph in the hv.conv abstraction to contain
+\, edit the __conv~f subgraph in the hv.conv abstraction to contain
 your own local implementation.;
 #X connect 0 0 5 0;
 #X connect 2 0 5 1;
