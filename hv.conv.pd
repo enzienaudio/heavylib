@@ -7,7 +7,7 @@
 #X text 171 115 Put your convolution implementation here.;
 #X obj 220 63 inlet table)name;
 #X obj 342 63 inlet length;
-#X restore 21 39 pd @hv_obj __conf~f \$1 \$2;
+#X restore 21 39 pd @hv_obj __conv~f \$1 \$2;
 #X obj 94 15 inlet table;
 #X obj 168 15 inlet length;
 #X connect 0 0 2 0;
