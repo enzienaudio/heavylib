@@ -68,6 +68,10 @@ Math Operations
 ---
 `[hv.exp]` - Signal-rate exponential ( exp ), alternative implementation.
 
+`[hv.eq]` - Signal-rate equal ( == ).
+
+`[hv.neq]` - Signal-rate not equal ( != ).
+
 `[hv.gt]` - Signal-rate greater than ( > ).
 
 `[hv.gte]` - Signal-rate greater than or equal to ( >= ).
