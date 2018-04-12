@@ -1,0 +1,50 @@
+#N canvas 434 149 537 393 10;
+#X obj 18 22 osc~ 400;
+#X obj 18 121 dac~;
+#X msg 64 47 ir_1;
+#X msg 111 69 64;
+#X msg 75 69 ir_2;
+#X obj 18 95 hv.conv ir_1 128;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array ir_2 64 float 3;
+#A 0 0.571428 0.557143 0.514285 0.471428 0.42857 0.385713 0.342856
+0.299998 0.235712 0.171426 0.142854 0.114283 0.0642825 0.0142822 -0.0357181
+-0.0857185 -0.135719 -0.185719 -0.235719 -0.28572 -0.347625 -0.40953
+-0.471435 -0.585722 -0.642865 -0.700008 -0.757151 -0.82858 -0.900009
+-0.942867 -1.00715 -1.07144 -1.1143 -1.15715 -1.19287 -0.457149 -0.442863
+-0.428578 -0.400006 -0.371434 -0.328577 -0.264291 -0.200005 -0.128576
+-0.0571468 -0.042861 -0.042861 -0.042861 -0.042861 -0.042861 -0.0285752
+0.0714254 0.442856 0.485714 0.5 0.5 0.5 0.5 0.5 0.5 0.471428 0.442856
+0.414285 0.399999;
+#X coords 0 1 64 -1 200 140 1 0 0;
+#X restore 269 214 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array ir_1 64 float 3;
+#A 0 0.200001 0.242859 0.242859 0.214287 0.185715 0.157144 0.114286
+0.0571432 -0.0285717 -0.0714291 -0.114286 -0.17143 -0.228573 -0.285716
+-0.328574 -0.385717 -0.44286 -0.542861 -0.628575 0.300002 0.300002
+0.300002 0.292859 0.27143 0.27143 0.27143 0.27143 0.300002 0.342859
+0.364288 0.414288 0.44286 0.457146 0.485717 0.514289 0.528575 0.535718
+0.54286 0.54286 0.414288 0.285716 0.185715 0.100001 0.0142857 -0.0714291
+-0.185715 -0.285716 -0.314288 -0.342859 -0.385717 -0.39286 -0.414288
+-0.428574 -0.414288 -0.300002 -0.257145 -0.17143 -0.142858 -0.0714291
+-0.0285717 -0.0214288 -0.0142859 -0.0142859 -0.0857149;
+#X coords 0 1 64 -1 200 140 1;
+#X restore 27 214 graph;
+#X text 147 14 hv.conv performs convolution (i.e. FIR filtering) between
+an input signal and an impulse reponse (IR) in a table or array. The
+IR table may be updated at any time with the second inlet (or simply
+update the table contents). The hv.conv object also takes a length
+parameter which must be less than or equal to the length of the table.
+It determines the length of the convolution.;
+#X text 147 117 NOTE! Pd-Vanilla does not have a default convolution
+object. This functionality is generally provided by any number of externals
+\, such as conv~ or fir~. In order to effectively use hv.conv in Pd
+\, edit the __conv~f subgraph in the hv.conv abstraction to contain
+your own local implementation.;
+#X connect 0 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 5 2;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;

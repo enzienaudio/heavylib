@@ -1,0 +1,16 @@
+#N canvas 153 394 264 92 10;
+#X obj 21 15 inlet~;
+#X obj 21 63 outlet~;
+#N canvas 0 22 450 300 @hv_obj 0;
+#X obj 168 63 inlet~;
+#X obj 174 176 outlet~;
+#X text 171 115 Put your convolution implementation here.;
+#X obj 220 63 inlet table)name;
+#X obj 342 63 inlet length;
+#X restore 21 39 pd @hv_obj __conv~f \$1 \$2;
+#X obj 94 15 inlet table;
+#X obj 168 15 inlet length;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 2;
