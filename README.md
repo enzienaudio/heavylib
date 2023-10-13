@@ -1,6 +1,10 @@
 # heavylib
 Library of [heavy](https://enzienaudio.com) compatible abstractions.
 
+## IMPORTANT!
+
+This repo is no longer maintained. Please see [Wasted-Audio's heavylib fork](https://github.com/Wasted-Audio/heavylib) for future development and support.
+
 See the -help.pd patches for more information on each object.
 
 Synthesis
